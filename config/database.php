@@ -40,11 +40,11 @@ return [
 
         'pgsql' => [
             'driver'   => 'pgsql',
-            'host'     => 'ec2-23-20-205-19.compute-1.amazonaws.com',
-            'port'     => '5432',
-            'database' => 'dc5vevck81irts',
-            'username' => 'loaljfwuvosfsd',
-            'password' => '93352382950d3e61f6d01cfccaba9de247116fd572bb5e59ee3107c46ffef8ad',
+            'host'     => $db_config['host'],
+            'port'     => env('DB_PORT', '5432'),
+            'database' => $db_config['database'],
+            'username' => $db_config['username'],
+            'password' => $db_config['password'],
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
